@@ -1,1 +1,1 @@
-<h1>La Page <?= $page ?> n'a pas été trouvée</h1>
+<h1>La page <?= $page ?> n'a pas été trouvée</h1>

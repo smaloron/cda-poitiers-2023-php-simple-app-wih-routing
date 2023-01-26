@@ -18,3 +18,23 @@ function getController(string $page): string
 
     return $controller;
 }
+
+/**
+ * Affiche le contenu d'une vue
+ *
+ * @param string $viewName
+ * @return void
+ */
+function render(string $viewName, $params = [])
+{
+    $viewPath = VIEW_DIR . "/{$viewName}-view.php";
+    if (file_exists($viewPath)) {
+        extract($params);
+        include $viewPath;
+    } else {
+        $params["error"] = "La vue $viewName n'existe pas";
+        extract($params);
+        header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
+        include VIEW_DIR . "/render-error-view.php";
+    }
+}
