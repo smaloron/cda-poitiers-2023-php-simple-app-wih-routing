@@ -1,20 +1,56 @@
+<?php
+function getQuestionClass(array $question, string $answer): string
+{
+    if (empty($answer)) {
+        return "";
+    } else if ($question["goodAnswer"] == $answer) {
+        return "good-answer";
+    } else {
+        return "wrong-answer";
+    }
+}
+?>
+
+<style>
+.good-answer {
+    background-color: greenyellow;
+}
+
+.wrong-answer {
+    background-color: red;
+}
+</style>
+
 <h1><?= $quiz["title"] ?></h1>
 
-<?php foreach ($quiz["questions"] as $item) : ?>
-<div>
-    <h3><?= $item["question"] ?></h3>
-    <ul>
-        <?php foreach ($item["options"] as $option) : ?>
-        <li style="display: flex">
-            <input type="radio" name="answers[<?= $item["id"] ?>][]">
-            <label>
-                <?= $option ?>
-            </label>
+<form method="post">
+    <?php
+    foreach ($quiz["questions"] as $item) :
+        $currentAnswer =  $answers[$item["id"]];
+    ?>
+    <div class="<?= getQuestionClass($item, $currentAnswer) ?>">
+        <h3><?= $item["question"] ?></h3>
+        <ul>
+            <?php
+                $optionSize = count($item["options"]);
+                for ($i = 0; $i < $optionSize; $i++) :
+                    $option = $item["options"][$i];
+                ?>
+            <li style="display: flex">
+                <input type="radio" name="answers[<?= $item["id"] ?>]" value="<?= $i + 1 ?>"
+                    <?= $currentAnswer == $i + 1 ? "checked" : "" ?>>
+                <label>
+                    <?= $option ?>
+                </label>
 
-        </li>
-        <?php endforeach; ?>
-    </ul>
-</div>
-<hr>
+            </li>
+            <?php endfor; ?>
+        </ul>
+    </div>
+    <hr>
+    <?php endforeach; ?>
 
-<?php endforeach; ?>
+    <div>
+        <button type="submit" name="submit">Valider</button>
+    </div>
+</form>
