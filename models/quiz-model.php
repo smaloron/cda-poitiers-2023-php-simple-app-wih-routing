@@ -1,5 +1,5 @@
 <?php
-define("QUIZ_PATH", "/data/quiz.json");
+define("QUIZ_PATH", DATA_DIR . "/quiz.json");
 
 function findAll(): array
 {

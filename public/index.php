@@ -5,6 +5,8 @@ ob_start();
 define("ROOT_DIR", dirname(__DIR__));
 define("CONTROLLER_DIR", ROOT_DIR . "/controllers/");
 define("VIEW_DIR", ROOT_DIR . "/views/");
+define("MODEL_DIR", ROOT_DIR . "/models");
+define("DATA_DIR", ROOT_DIR . "/data");
 
 require ROOT_DIR . "/framework/framework.php";
 
