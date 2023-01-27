@@ -1,0 +1,34 @@
+{
+    "title": "Quiz informatique",
+    "questions": [
+        {
+            "question": "Que veut dire PHP ?",
+            "options": [
+                "Pauvre Hercule Paralytique",
+                "Pacte Hétéroclite des Pachidermes",
+                "Personal HomePage"
+            ],
+            "goodAnswer": 3
+        },
+        {
+            "question": "Combien de bits dans un octet ?",
+            "options": [
+                "1024",
+                "256",
+                "8",
+                "1"
+            ],
+            "goodAnswer": 3
+        },
+        {
+            "question": "Qui a inventé PHP ?",
+            "options": [
+                "Linus Torvald",
+                "Rasmus Lerdorf",
+                "Bill Gates",
+                "Lucifer"
+            ],
+            "goodAnswer": 2
+        }
+    ]
+}
