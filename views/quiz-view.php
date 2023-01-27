@@ -26,7 +26,7 @@ function getQuestionClass(array $question, string $answer): string
 <form method="post">
     <?php
     foreach ($quiz["questions"] as $item) :
-        $currentAnswer =  $answers[$item["id"]];
+        $currentAnswer =  $answers[$item["id"]] ?? "";
     ?>
     <div class="<?= getQuestionClass($item, $currentAnswer) ?>">
         <h3><?= $item["question"] ?></h3>
