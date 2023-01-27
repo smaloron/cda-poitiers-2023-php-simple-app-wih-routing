@@ -1,0 +1,27 @@
+{
+  "name": "simple-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link-node-modules": "symlink-dir ./node_modules ./public/assets",
+    "link-sakura": "symlink-dir ./node_modules/sakura.css/css ./public/css/sakura",
+    "postinstall": "npm run link-node-modules && npm run link-sakura"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smaloron/cda-poitiers-2023-php-simple-app-wih-routing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smaloron/cda-poitiers-2023-php-simple-app-wih-routing/issues"
+  },
+  "homepage": "https://github.com/smaloron/cda-poitiers-2023-php-simple-app-wih-routing#readme",
+  "dependencies": {
+    "sakura.css": "^1.4.1",
+    "symlink-dir": "^5.1.0"
+  }
+}
