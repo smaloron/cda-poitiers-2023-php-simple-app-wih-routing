@@ -2,6 +2,7 @@
     "title": "Quiz informatique",
     "questions": [
         {
+            "id": 1,
             "question": "Que veut dire PHP ?",
             "options": [
                 "Pauvre Hercule Paralytique",
@@ -11,6 +12,7 @@
             "goodAnswer": 3
         },
         {
+            "id": 2,
             "question": "Combien de bits dans un octet ?",
             "options": [
                 "1024",
@@ -21,6 +23,7 @@
             "goodAnswer": 3
         },
         {
+            "id": 3,
             "question": "Qui a inventé PHP ?",
             "options": [
                 "Linus Torvald",
