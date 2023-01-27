@@ -6,3 +6,20 @@ function findAll(): array
     $content = file_get_contents(QUIZ_PATH);
     return json_decode($content, true);
 }
+
+function deleteOneById($id)
+{
+    $data = findAll();
+
+    $questions = array_filter(
+        $data["questions"],
+        function ($item) use ($id) {
+            return $item["id"] != $id;
+        }
+    );
+
+    $data["questions"] = $questions;
+
+
+    file_put_contents(QUIZ_PATH, json_encode($data));
+}
