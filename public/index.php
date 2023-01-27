@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 // Constantes pour les chemins de l'application
 define("ROOT_DIR", dirname(__DIR__));
 define("CONTROLLER_DIR", ROOT_DIR . "/controllers/");

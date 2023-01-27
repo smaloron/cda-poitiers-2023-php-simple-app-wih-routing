@@ -1,5 +1,5 @@
 <?php
 
-render("home2", ["page" => $page]);
+render("home", ["page" => $page]);
 
 //include VIEW_DIR . "/home-view.php";
