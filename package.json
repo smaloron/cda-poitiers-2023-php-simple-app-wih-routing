@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/smaloron/cda-poitiers-2023-php-simple-app-wih-routing#readme",
   "dependencies": {
+    "jquery": "^3.6.3",
     "sakura.css": "^1.4.1",
     "symlink-dir": "^5.1.0"
   }

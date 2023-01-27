@@ -23,3 +23,10 @@ function deleteOneById($id)
 
     file_put_contents(QUIZ_PATH, json_encode($data));
 }
+
+function addQuestion($question)
+{
+    $data = findAll();
+    $data["questions"][] = $question;
+    file_put_contents(QUIZ_PATH, json_encode($data));
+}

@@ -1,1 +1,15 @@
-{"title":"Quiz informatique","questions":{"1":{"id":2,"question":"Qui a invent\u00e9 PHP ?","options":["Linus Torvald","Rasmus Lerdorf","Bill Gates","Lucifer"],"goodAnswer":2}}}
+{
+    "title": "Quiz informatique",
+    "questions": [
+        {
+            "question": "Qui a invent\u00e9 PHP",
+            "options": [
+                "Linus Torvald",
+                "Rasmus Lerdorf",
+                "Le Pape"
+            ],
+            "goodAnswer": "2",
+            "id": "63d3f4bfee1db"
+        }
+    ]
+}
