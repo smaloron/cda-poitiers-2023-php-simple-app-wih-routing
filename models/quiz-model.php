@@ -76,12 +76,14 @@ function updateQuestion(array $quiz, array $question)
     }
 }
 
-function findOneQuestionById(int $id, array $quiz): array
+function findOneQuestionById(string $id, array $quiz): array
 {
-    return array_filter(
+    $q =  array_filter(
         $quiz["questions"],
         function ($item) use ($id) {
             return $item["id"] == $id;
         }
     );
+
+    return $q[0] ?? [];
 }

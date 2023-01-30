@@ -1,6 +1,8 @@
 <?php
 include MODEL_DIR . "/quiz-model.php";
 
+$question = [];
+
 $isPosted = filter_has_var(INPUT_POST, "submit");
 if ($isPosted) {
     $question = $_POST;
@@ -12,4 +14,11 @@ if ($isPosted) {
     header("location:/quiz-admin");
 }
 
-render("quiz-form");
+render(
+    "quiz-form",
+    [
+        "title" => "Ajout d'une question",
+        "question" => $question,
+        "updateMode" => false
+    ]
+);
