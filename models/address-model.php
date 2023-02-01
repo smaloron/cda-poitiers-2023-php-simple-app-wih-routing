@@ -44,3 +44,25 @@ function insert(array &$data): bool
     $data["id"] = $pdo->lastInsertId();
     return $success;
 }
+
+/**
+ * Supprime une adresse en fonction de son id
+ *
+ * @param integer $id l'identifiant de l'adresse
+ * @return boolean l'opération est elle un succès
+ */
+function deleteOneById(int $id): bool
+{
+    $pdo = getPDO();
+    $statement = $pdo->prepare("DELETE FROM adresses WHERE id =?");
+    return $statement->execute([$id]);
+}
+
+function update(array $data): bool
+{
+    $pdo = getPDO();
+    $sql = "UPDATE adresses SET 
+    rue=:rue, code_postal=:code_postal, ville=:ville WHERE id=:id";
+    $statement = $pdo->prepare($sql);
+    return $statement->execute($data);
+}
