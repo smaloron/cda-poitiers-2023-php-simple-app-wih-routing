@@ -22,6 +22,9 @@
                 <a href="/address/delete?id=<?= $address["id"] ?>">
                     Supprimer
                 </a>
+                <a href="/address/update?id=<?= $address["id"] ?>">
+                    Modifier
+                </a>
             </td>
         </tr>
         <?php endforeach; ?>

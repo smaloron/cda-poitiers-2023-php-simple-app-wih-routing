@@ -2,15 +2,15 @@
 <form method="post">
     <div>
         <label>rue</label>
-        <input type="text" name="rue">
+        <input type="text" name="rue" value="<?= $address["rue"] ?? "" ?>">
     </div>
     <div>
         <label>code postal</label>
-        <input type="text" name="code_postal">
+        <input type="text" name="code_postal" value="<?= $address["code_postal"] ?? "" ?>">
     </div>
     <div>
         <label>ville</label>
-        <input type="text" name="ville">
+        <input type="text" name="ville" value="<?= $address["ville"] ?? "" ?>">
     </div>
 
     <div>
