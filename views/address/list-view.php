@@ -6,6 +6,7 @@
             <th>rue</th>
             <th>code postal</th>
             <th>ville</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -14,6 +15,11 @@
             <td><?= $address["rue"] ?></td>
             <td><?= $address["code_postal"] ?></td>
             <td><?= $address["ville"] ?></td>
+            <td>
+                <a href="/address/delete?id=<?= $address["id"] ?>">
+                    Supprimer
+                </a>
+            </td>
         </tr>
         <?php endforeach; ?>
     </tbody>
