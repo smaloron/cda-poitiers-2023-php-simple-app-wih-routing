@@ -1,5 +1,8 @@
 <h1>Liste des adresses</h1>
 
+<div>
+    <a href="/address/new">Ajout d'une adresse</a>
+</div>
 <table>
     <thead>
         <tr>
