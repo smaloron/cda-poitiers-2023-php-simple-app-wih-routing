@@ -1,15 +1,13 @@
 <?php
+require MODEL_DIR . "/address-model.php";
 
-$pdo = getPDO();
+var_dump(findOneById(7));
 
-$result = $pdo->query("SELECT * FROM adresses");
+$address = [
+    "rue" => "3 rue des Granges",
+    "code_postal" => "25000",
+    "ville" => "Besançon"
+];
+insert($address);
 
-
-
-var_dump(
-    $result->fetchAll(PDO::FETCH_OBJ)
-);
-
-var_dump(
-    $result->fetch()
-);
+var_dump($address);
