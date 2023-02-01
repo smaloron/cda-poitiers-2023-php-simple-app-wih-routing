@@ -5,7 +5,7 @@ require MODEL_DIR . "/address-model.php";
 $data = findAll();
 // Afficher une vue pour présenter cette liste dans une table html
 render(
-    "address/form",
+    "address/list",
     [
         "addressList" => $data
     ]
