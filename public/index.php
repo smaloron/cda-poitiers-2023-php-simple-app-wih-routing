@@ -9,6 +9,9 @@ define("MODEL_DIR", ROOT_DIR . "/models");
 define("DATA_DIR", ROOT_DIR . "/data");
 
 require ROOT_DIR . "/framework/framework.php";
+// Fonctions pour la création d'une connexion à la BD
+require ROOT_DIR . "/config.php";
+require MODEL_DIR . "/pdo.php";
 
 // Récupération du paramètre de la page demandée
 // Si pas de paramètre le valeur par défaut est home
