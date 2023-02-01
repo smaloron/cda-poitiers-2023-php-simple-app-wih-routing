@@ -58,6 +58,12 @@ function deleteOneById(int $id): bool
     return $statement->execute([$id]);
 }
 
+/**
+ * Met à jour une adresse en fonction d'un tableau associatif représentant les infos de cette adresse
+ *
+ * @param array $data
+ * @return boolean
+ */
 function update(array $data): bool
 {
     $pdo = getPDO();
