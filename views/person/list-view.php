@@ -1,5 +1,9 @@
 <h2>Liste des personnes</h2>
 
+<div>
+    <a href="/person/new">Ajouter une personne</a>
+</div>
+
 <table>
     <thead>
         <tr>
