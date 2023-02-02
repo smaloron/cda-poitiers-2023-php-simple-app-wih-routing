@@ -27,7 +27,11 @@ function authenticate(string $userName, string $pass): bool
     if ($user) {
         // comparer les mots de passe avec la fonction password_verify
         // retourne le résultat de la vérification
-        return password_verify($pass, $user["user_password"]);
+        $success = password_verify($pass, $user["user_password"]);
+        if ($success) {
+            $_SESSION["user"] = $user["user_name"];
+        }
+        return $success;
     } else {
         return false;
     }

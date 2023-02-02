@@ -1,5 +1,7 @@
 <?php
 ob_start();
+session_start();
+session_regenerate_id();
 
 // Constantes pour les chemins de l'application
 define("ROOT_DIR", dirname(__DIR__));
@@ -15,7 +17,15 @@ require MODEL_DIR . "/pdo.php";
 
 // Récupération du paramètre de la page demandée
 // Si pas de paramètre le valeur par défaut est home
-$page = $_GET["page"] ?? "home";
+$page = $_GET["page"] ?? "/home";
+
+// Vérification de la sécurité
+$publicRoutes = ["/login", "/register", "/home"];
+
+if (!in_array($page, $publicRoutes) && !isset($_SESSION["user"])) {
+    header("location:/login");
+    exit;
+}
 
 
 // Inclusion du contrôleur
