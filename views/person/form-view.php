@@ -31,7 +31,7 @@
     </fieldset>
 
     <div>
-        <button type="submit" value="submit">VALIDER</button>
+        <button type="submit" name="submit">VALIDER</button>
     </div>
 
 </form>

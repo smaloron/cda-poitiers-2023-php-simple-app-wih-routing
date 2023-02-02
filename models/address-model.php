@@ -72,3 +72,16 @@ function update(array $data): bool
     $statement = $pdo->prepare($sql);
     return $statement->execute($data);
 }
+
+
+function findAddresses(array $search)
+{
+    $sql = "SELECT * FROM adresses WHERE 
+    rue=:rue AND code_postal=:code_postal AND ville = :ville";
+
+    $pdo = getPDO();
+    $statement = $pdo->prepare($sql);
+    $statement->execute($search);
+
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
